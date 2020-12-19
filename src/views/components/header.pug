@@ -1,2 +1,27 @@
 mixin header()
-	header
+    header.header
+        .container
+            .header__inner
+                .header__logo
+                    a( href="/" )
+                        svg
+                            use( xlink:href=require('../img/icons/logo.svg') + '#ico' )
+
+                nav.header__nav
+                    ul
+                        li
+                            a( href=route('top') ) Top 3%
+
+                        li
+                            a( href=route('advantages') ) Why we
+
+                        li
+                            a( href=route('about') ) About Us
+
+                .header__links
+                    a( href="#" ).header__link.btn-link Apply as a Freelancer
+                    a( href="#" ).header__link.btn.btn-secondary Hire a Talent
+                    .header__menu
+                        span
+                        span
+                        span

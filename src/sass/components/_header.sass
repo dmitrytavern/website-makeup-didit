@@ -1,6 +1,89 @@
 .header
-  width: 100%
+  &__inner
+    display: flex
+    align-items: center
+    font-weight: 500
+    padding: 20px 0
 
-@media (max-width: 576px)
+  &__logo
+    flex: auto
+
+    svg
+      width: 123px
+      height: 43px
+
+  &__nav
+    flex: auto
+
+    ul
+      display: flex
+      align-items: center
+      justify-content: center
+
+    li
+      margin: 0 35px
+
+      @include un-margin-horizontal
+
+    a
+      color: #2B2B2B
+
+  &__links
+    flex: auto
+    display: flex
+    align-items: center
+    justify-content: flex-end
+
+  &__link:not(:first-child)
+    margin-left: 40px
+
+  &__menu
+    position: relative
+    width: 46px
+    height: 46px
+    min-width: 46px
+    min-height: 46px
+    border: 2px solid #EFEBF5
+    margin-left: 30px
+    cursor: pointer
+
+    span
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translateY(0)
+      margin-left: -11px
+      display: block
+      width: 22px
+      height: 2px
+      background: #000
+
+      &:first-child
+        transform: translateY(-7px)
+
+      &:last-child
+        transform: translateY(7px)
+
+
+@include media-lg-max
+  .header__nav
+    display: none
+
+@include media-md-max
+  .header__link
+    display: none
+
+@include media-lg-min
+  .header__menu
+    display: none
+
+@include media-xl-min
   .header
-    width: 50%
+    &__logo
+      flex: 30%
+
+    &__nav
+      flex: 40%
+
+    &__links
+      flex: 30%
