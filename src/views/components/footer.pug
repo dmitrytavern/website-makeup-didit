@@ -1,2 +1,26 @@
 mixin footer()
-	footer
+    footer.footer
+        .container
+            .footer__inner
+                .footer__col.footer__info
+                    .footer__info-copyright © 2020 Didit. All rights reserved.
+                    .footer__info-dev
+                        span Developed by
+                        a( href="/" )  Greatpix
+
+                .footer__col.footer__main
+                    .footer__logo
+                        a(href="/")
+                            svg
+                                use( xlink:href=require('../img/icons/logo.svg') + '#ico' )
+
+                    nav.footer__nav
+                        ul
+                            li
+                                a( href=route('privacy-policy') ) Privacy Policy
+
+                            li
+                                a( href=route('cookie-policy') ) Cookie Policy
+
+                .footer__col.footer__contacts
+                    a( href="mailto:contact@didit.com" ).footer__contact contact@didit.com

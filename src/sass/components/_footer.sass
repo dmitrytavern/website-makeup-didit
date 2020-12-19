@@ -1,21 +1,101 @@
-footer
-  width: 100%
-  height: 100px
+.footer
+  background: #FAFAFA
 
-  @include media-xx-max
-    background: #000
+  &__inner
+    display: flex
+    align-items: center
+    padding-top: 40px
+    padding-bottom: 37px
 
-  @include media-xl-max
-    background: #f00
+  &__info
+    color: #585858
+    font-size: 15px
 
-  @include media-lg-max
-    background: #ff0
+    &-dev
+      margin-top: 15px
 
-  @include media-md-max
-    background: #f0f
+    a
+      font-size: 15px
+      color: $color-primary
 
-  @include media-sm-max
-    background: #0ff
+  &__main
+    display: flex
+    align-items: center
+    flex-direction: column
 
-  @include media-xs
-    background: #0f0
+  &__logo
+    svg
+      width: 158px
+      height: 54px
+
+  &__nav
+    padding-top: 30px
+    margin-top: 15px
+    border-top: 1px solid #F4F4F4
+
+    ul
+      display: flex
+      align-items: center
+
+    li
+      margin: 0 20px
+
+      @include un-margin-horizontal
+
+    a
+      font-size: 14px
+
+@include media-lg-max
+  .footer
+    &__info
+      font-size: 14px
+
+      a
+        font-size: 14px
+
+    &__contacts
+      font-size: 14px
+      padding-top: 25px
+      padding-bottom: 30px
+
+@include media-md-max
+  .footer
+    &__inner
+      flex-direction: column
+      justify-content: center
+      text-align: center
+
+    &__col
+      flex: 0 0 100%
+
+      &:first-child
+        order: 3
+
+      &:nth-child(2)
+        order: 1
+
+      &:last-child
+        order: 2
+
+@include media-md-min
+  .footer
+    &__col
+      &:first-child
+        flex: 0 0 30%
+
+      &:nth-child(2)
+        flex: 0 0 40%
+
+      &:last-child
+        flex: 0 0 30%
+
+    &__contacts
+      align-self: flex-start
+      text-align: right
+      padding-top: 35px
+
+@include media-xl-min
+  .footer
+    &__inner
+      padding-left: 85px
+      padding-right: 85px
