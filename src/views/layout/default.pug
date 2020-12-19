@@ -1,0 +1,32 @@
+include ../components/header
+include ../components/footer
+
+doctype html
+
+block variables
+    - var mainClassName = ''
+
+html(lang="en")
+    head
+        include parts/head
+        block head
+
+        include parts/styles
+        block styles
+
+    body
+
+        block header
+            +header()
+
+        main( class=mainClassName )
+            block content
+
+        block footer
+            +footer()
+
+        block modals
+
+        include parts/scripts
+
+        block scripts

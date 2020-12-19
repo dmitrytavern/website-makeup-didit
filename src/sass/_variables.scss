@@ -1,0 +1,101 @@
+// Grid
+// Display sizes
+// --------------
+// 320
+// 360
+// 375 (main)
+// 414
+// 480
+// 576
+// 600
+// 768 (main)
+// 1000 (main)
+// 1366
+// 1440
+// 1600 (main)
+// 1920
+// 2560 (main)
+
+
+$grid-breakpoint-xs: 480px;  // xs - <=480px   - mobile
+$grid-breakpoint-sm: 578px;  // sm - >=578px   - tablet (portrait)
+$grid-breakpoint-md: 768px;  // md - >=768px   - tablet (landscape)
+$grid-breakpoint-lg: 1024px; // lg - >=1024px  - laptop
+$grid-breakpoint-xl: 1440px; // xl - >=1440px  - desktop
+$grid-breakpoint-xx: 1921px; // xx - >=1921px  - 4k, large screen
+
+$grid-columns: 12;
+$grid-gutter: 30px;
+$grid-gutter-container: 40px;
+$grid-offset: false;
+
+$container-gutter-widths: (
+  // sm: 100px,
+  // md: 100px,
+  // lg: 100px,
+  xl: 140px,
+  // xx: 100px
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: $grid-breakpoint-sm,
+  md: $grid-breakpoint-md,
+  lg: $grid-breakpoint-lg,
+  xl: $grid-breakpoint-xl,
+  xx: $grid-breakpoint-xx
+);
+
+$container-max-widths: (
+  sm: 576px,
+  md: 768px,
+  lg: 1100px,
+  xl: 1570px,
+  xx: 2519px
+);
+
+
+
+// Fonts
+
+$font: 'Gilroy';
+$font-size: 16px;
+$font-weight: normal;
+
+
+
+// Heading
+// (min, max);
+
+$h1-font-size: (38, 54);
+$h2-font-size: (30, 44);
+$h3-font-size: (22, 26);
+$h4-font-size: (22, 24);
+
+
+
+// Color
+
+$color-primary: #6D3BC0;
+$color-secondary: #888888;
+
+
+
+// Indents
+
+$indents-available: false;
+$indents-padding-available: true;
+$indents-margin-available: true;
+
+$indents: (
+  "margin": (
+    "0": 0px,
+    "1": 15px,
+    "2": 30px
+  ),
+  "padding": (
+    "0": 0px,
+    "1": 10px,
+    "2": 20px,
+  )
+);

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="14px" viewBox="0 0 9 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>right-chevron (1)</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-2550" transform="translate(-1971.000000, -4771.000000)">
+            <g id="Reviews-Copy" transform="translate(544.000000, 4590.000000)">
+                <g id="Group-19" transform="translate(1328.000000, 162.000000)">
+                    <g id="right-chevron-(1)" transform="translate(74.000000, 0.000000)" filter="url(#filter-1)">
+                        <g transform="translate(25.000000, 19.000000)">
+                            <polygon id="Path" fill="#000000" fill-rule="nonzero" points="1.70039844 0 0.0496015625 1.65085156 5.39875 7 0.0496015625 12.3491484 1.70039844 14 8.70039844 7"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
