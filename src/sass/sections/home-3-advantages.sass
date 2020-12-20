@@ -1,0 +1,44 @@
+.advantages
+  background: url('../../img/why-bg.png')
+  background-repeat: no-repeat
+  background-size: cover
+
+  &__inner
+    padding-top: 90px
+    padding-bottom: 65px
+    color: #ffffff
+
+  &__head
+    margin-bottom: 80px
+
+  &__list
+    display: grid
+    grid-template-columns: 1fr
+    grid-row-gap: 50px
+    grid-column-gap: 50px
+
+
+@include media-md-min
+  .advantages
+    &__inner
+      padding-bottom: 100px
+
+    &__list
+      grid-template-columns: 1fr 1fr
+
+@include media-lg-min
+  .advantages
+    &__list
+      grid-template-columns: 1fr 1fr
+      grid-column-gap: 80px
+
+@include media-xl-min
+  .advantages
+    &__head
+      margin-bottom: 100px
+
+    &__list
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-column-gap: 55px
+
+@import "home-3-advantage/advantage"
