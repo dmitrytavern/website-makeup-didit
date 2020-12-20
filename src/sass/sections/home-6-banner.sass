@@ -1,0 +1,35 @@
+.banner
+  margin-top: 140px
+  background: url('../../img/banner-bg.png')
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+
+  &__inner
+    padding: 85px 0
+    color: #ffffff
+
+  &__head
+    margin-bottom: 80px
+
+  &__buttons
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &__button
+    margin: 12px 25px
+    min-width: 240px
+
+    @include un-margin-horizontal
+
+@include media-md-max
+  .banner
+    &__buttons
+      flex-direction: column
+
+    &__button
+      margin: 12px 0
+
+      @include un-margin-vertical
+
