@@ -9,19 +9,39 @@ mixin header()
 
                 nav.header__nav
                     ul
-                        li
+                        li( class=routeActive('top') ? 'is-active':'' )
                             a( href=route('top') ) Top 3%
 
-                        li
+                        li( class=routeActive('top') ? 'is-active':'' )
                             a( href=route('advantages') ) Why we
 
-                        li
+                        li( class=routeActive('top') ? 'is-active':'' )
                             a( href=route('about') ) About Us
 
                 .header__links
                     a( href="#" ).header__link.btn-link Apply as a Freelancer
                     a( href="#" ).header__link.btn.btn-secondary Hire a Talent
-                    .header__menu
+                    .header__menu#header-menu-btn
                         span
                         span
                         span
+
+    .menu
+        .container.menu__container
+            .menu__inner
+                .menu__nav
+                    ul
+                        li( class=routeActive('index') ? 'is-active': '' )
+                            a( href='/' ) Home
+
+                        li( class=routeActive('top') ? 'is-active':'' )
+                            a( href=route('top') ) Top 3%
+
+                        li( class=routeActive('top') ? 'is-active':'' )
+                            a( href=route('advantages') ) Why we
+
+                        li( class=routeActive('top') ? 'is-active':'' )
+                            a( href=route('about') ) About Us
+
+                .menu__email
+                    a( href="mailto:contact@didit.com" ) contact@didit.com

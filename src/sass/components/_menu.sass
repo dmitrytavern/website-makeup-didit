@@ -1,0 +1,68 @@
+.menu
+  transition: visibility .3s, opacity .3s
+
+  @include visibility-hidden
+
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: #ffffff
+  z-index: 9
+
+  &__container
+    height: 100%
+
+  &__inner
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 100%
+    padding-top: 90px
+    padding-bottom: 35px
+
+  &__nav
+
+    li
+      margin: 40px 0
+
+      @include un-margin-vertical
+      @include make-font-size(28, 46, 480, 768)
+
+      font-weight: 500
+
+      &:before
+        content: "•"
+        display: inline-block
+        vertical-align: middle
+        color: $color-primary
+        width: 1em
+        font-size: 16px
+        font-weight: 700
+        margin-right: 28px
+
+      &.is-active
+        a
+          color: $color-primary
+
+  &.is-open
+    @include visibility-visible
+
+@include media-sm-min
+  .menu
+
+    &__inner
+      padding-top: 140px
+      padding-bottom: 65px
+      padding-left: 25px
+
+    &__nav li
+      margin: 85px 0
+
+@include media-lg-min
+  .menu
+    // Full hide menu for laptop
+    opacity: 0 !important
+    visibility: hidden !important
+    z-index: -1 !important

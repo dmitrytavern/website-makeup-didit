@@ -1,4 +1,5 @@
 .header
+  transition: background .3s
   position: fixed
   width: 100%
   top: 0
@@ -31,6 +32,11 @@
 
       @include un-margin-horizontal
 
+      &.is-active
+        a
+          color: $color-primary
+          text-decoration: underline
+
   &__links
     flex: auto
     display: flex
@@ -41,16 +47,19 @@
     margin-left: 40px
 
   &__menu
+    transition: border-color .3s, background .3s
     position: relative
     width: 46px
     height: 46px
     min-width: 46px
     min-height: 46px
     border: 2px solid #EFEBF5
+    border-radius: 2px
     margin-left: 30px
     cursor: pointer
 
     span
+      transition: transform .3s, opacity .3s, background .3s
       position: absolute
       top: 50%
       left: 50%
@@ -66,6 +75,25 @@
 
       &:last-child
         transform: translateY(7px)
+
+    &.is-active
+      border-color: $color-primary
+      background: $color-primary
+
+      span
+        background: #ffffff
+
+        &:first-child
+          transform: rotate(-45deg)
+
+        &:nth-child(2)
+          opacity: 0
+
+        &:last-child
+          transform: rotate(45deg)
+
+  &.is-scroll
+    background: #ffffff
 
 
 @include media-lg-max
