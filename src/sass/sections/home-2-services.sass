@@ -1,19 +1,28 @@
 .services
   margin-top: 100px
-  overflow-x: hidden
+  padding-bottom: 100px
+  overflow: hidden
 
   &__inner
     position: relative
 
-  &__dots
+  &__dots-top,
+  &__dots-bottom
     position: absolute
-    width: 700px
     max-width: unset
+    opacity: .7
+    z-index: -1
+
+  &__dots-top
+    width: 700px
     top: -30px
     right: 0
     transform: translateX(25%)
-    opacity: .7
-    z-index: -1
+
+  &__dots-bottom
+    width: 500px
+    bottom: -8%
+    left: -68%
 
   &__head
     margin-bottom: 80px
@@ -30,9 +39,14 @@
     &__list
       grid-template-columns: 1fr 1fr
 
+    &__dots-bottom
+      bottom: -20%
+      left: -28%
+
 @include media-lg-min
   .services
     margin-top: 140px
+    padding-bottom: 140px
 
     &__head
       margin-bottom: 100px
@@ -41,8 +55,12 @@
       grid-row-gap: 40px
       grid-column-gap: 40px
 
-    &__dots
+    &__dots-top
       transform: translateX(15%)
+
+    &__dots-bottom
+      bottom: -25%
+      left: -20%
 
 
 @include media-xl-min
@@ -51,5 +69,10 @@
 
     &__list
       grid-template-columns: 1fr 1fr 1fr
+
+    &__dots-bottom
+      bottom: -23%
+      left: -10%
+
 
 @import "home-2-services/service"
