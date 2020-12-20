@@ -1,0 +1,135 @@
+.intro
+  background: #FCFBFF
+
+  &__inner
+    position: relative
+
+  &__title
+    margin-bottom: 25px
+    line-height: 44px
+
+  &__desc
+    margin-bottom: 45px
+    font-size: 17px
+    line-height: 22px
+
+  &__image
+    &-title
+      img
+        width: 100%
+        max-width: 474px
+        max-height: 424px
+
+    &-dots
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      overflow: hidden
+
+      img
+        width: 100%
+
+@include media-xl-max
+  .intro
+    &__image-dots
+      right: -20px
+
+@include media-lg-max
+  .intro
+    &__inner
+      text-align: center
+
+    &__content
+      position: relative
+      z-index: 1
+
+      &:before
+        content: ''
+        position: absolute
+        top: -160px
+        bottom: 0
+        left: -20px
+        right: -20px
+        z-index: -1
+        background: rgb(252,251,255)
+        background: linear-gradient(180deg, rgba(252,251,255,0) 0%, rgba(252,251,255,0.98) 27%, rgba(252,251,255,1) 100%)
+
+    &__image-dots
+      left: -20px
+
+      img
+        width: 140%
+        max-width: 560px
+        transform: translateX(-50%)
+        margin-left: 50%
+
+@include media-sm-max
+  .intro
+    &__inner
+      padding-top: 55px
+      padding-bottom: 45px
+
+    &__image-title
+      transform: translateY(30px)
+
+    &__image-dots img
+        max-width: 521px
+
+    &__content
+      position: relative
+      z-index: 1
+
+      &:before
+        top: -110px
+
+@include media-sm-min
+  .intro
+    &__inner
+      padding-top: 130px
+      padding-bottom: 85px
+
+    &__title
+      line-height: 58px
+      margin-bottom: 30px
+
+@include media-lg-min
+  .intro
+    &__inner
+      padding-top: 240px
+      padding-bottom: 135px
+
+    &__title span
+      display: block
+
+    &__desc
+      max-width: 445px
+
+    &__image-title
+      position: absolute
+      right: 0
+      bottom: 3%
+
+      img
+        max-width: 590px
+        max-height: 528px
+
+    &__image-dots img
+      max-width: 740px
+      transform: translateX(110px)
+
+@include media-xl-min
+  .intro
+    &__desc
+      max-width: 586px
+
+    &__image-title
+      bottom: -10%
+
+      img
+        max-width: 723px
+        max-height: 647px
+
+    &__image-dots img
+      max-width: 770px
+      transform: translateX(55px)
