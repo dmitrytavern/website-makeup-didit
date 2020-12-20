@@ -1,0 +1,32 @@
+.service
+  background: #FCFBFF
+
+  &__inner
+    padding: 20px
+
+  &__head
+    display: flex
+    align-items: center
+    margin-bottom: 15px
+
+  &__icon
+    max-width: 38px
+    max-height: 38px
+    margin-right: 25px
+
+  &__desc
+    line-height: 22px
+
+
+@include media-lg-min
+  .service
+    &__inner
+      padding: 50px 45px 35px
+
+    &__head
+      margin-bottom: 25px
+
+    &__icon
+      max-width: 48px
+      max-height: 48px
+      margin-right: 30px

@@ -1,0 +1,31 @@
+.section-head
+  text-align: center
+
+  &__title
+    line-height: 40px
+
+    &:after,
+    &:before
+      content: ''
+      display: block
+      width: 100%
+      max-width: 200px
+      height: 1px
+      background: #EBEBEB
+      margin: 0 auto
+
+    &:before
+      margin-bottom: 20px
+
+    &:after
+      margin-top: 20px
+
+  &__desc
+    max-width: 689px
+    margin: 25px auto 0
+    line-height: 22px
+
+@include media-md-min
+  .section-head
+    &__title
+      line-height: 62px

@@ -1,0 +1,55 @@
+.services
+  margin-top: 100px
+  overflow-x: hidden
+
+  &__inner
+    position: relative
+
+  &__dots
+    position: absolute
+    width: 700px
+    max-width: unset
+    top: -30px
+    right: 0
+    transform: translateX(25%)
+    opacity: .7
+    z-index: -1
+
+  &__head
+    margin-bottom: 80px
+
+  &__list
+    display: grid
+    grid-template-columns: 1fr
+    grid-column-gap: 20px
+    grid-row-gap: 20px
+
+
+@include media-md-min
+  .services
+    &__list
+      grid-template-columns: 1fr 1fr
+
+@include media-lg-min
+  .services
+    margin-top: 140px
+
+    &__head
+      margin-bottom: 100px
+
+    &__list
+      grid-row-gap: 40px
+      grid-column-gap: 40px
+
+    &__dots
+      transform: translateX(15%)
+
+
+@include media-xl-min
+  .services
+    margin-top: 155px
+
+    &__list
+      grid-template-columns: 1fr 1fr 1fr
+
+@import "home-2-services/service"
