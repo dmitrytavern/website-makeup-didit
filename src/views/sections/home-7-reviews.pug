@@ -1,1 +1,80 @@
 section.reviews
+    .container
+        .reviews__inner
+            .section-head.reviews__head
+                h2.section-head__title Hear From Our Clients
+
+            .swiper-container.reviews__slider
+                .reviews__slider-arrows.slider__arrows
+                    button.btn.btn-slider.slider__arrow.slider__arrow-prev
+                        svg
+                            use( xlink:href=sprite('arrow') )
+
+                    button.btn.btn-slider.slider__arrow.slider__arrow-next
+                        svg
+                            use( xlink:href=sprite('arrow') )
+
+                .swiper-wrapper.reviews__slider-wrapper
+
+                    .swiper-slide
+                        .review
+                            .review__inner
+                                .review__head
+                                    div.review__info
+                                        .review__avatar
+                                            img( src=require('../../img/client-1.png') )
+                                        div
+                                            .review__name Lyovushkin Kyrylo
+                                            .review__position Greatpix Studio, Founder
+                                    svg.review__quote
+                                        use( xlink:href=sprite('quote') )
+
+                                p.review__desc.
+                                    Large businesses require a lot of IT infrastructure and a department to look after it.
+                                    Small businesses often can’t afford to have that sort of internal support in place,
+                                    yet they need fully operational IT systems in order for the business to run properly.
+                                    For businesses like these, external IT support can be a cost-effective yet vital resource.
+
+
+                    .swiper-slide
+                        .review
+                            .review__inner
+                                .review__head
+                                    div.review__info
+                                        .review__avatar
+                                            img( src=require('../../img/client-2.png') )
+                                        div
+                                            .review__name Andrei Zaika
+                                            .review__position Azro Studio, Founder
+                                    svg.review__quote
+                                        use( xlink:href=sprite('quote') )
+
+                                p.review__desc.
+                                    HDMI, or high definition multimedia interface, is a type of audio and video interface
+                                    that is used for the transmission of uncompressed digital streams.
+                                    Essentially, HDMI can be considered an alternative method to transmitting data streams,
+                                    rather than making use of conventional methods such as coaxial cabling, VGA, or
+                                    component video equipment. What Type of Sources May Be Employed Using HDMI?
+
+                    .swiper-slide
+                        .review
+                            .review__inner
+                                .review__head
+                                    div.review__info
+                                        .review__avatar
+                                            img( src=require('../../img/client-1.png') )
+                                        div
+                                            .review__name Dmitry Tavern
+                                            .review__position Greatpix Studio, Developer
+
+                                    svg.review__quote
+                                        use( xlink:href=sprite('quote') )
+
+                                p.review__desc.
+                                    Large businesses require a lot of IT infrastructure and a department to look after it.
+                                    Small businesses often can’t afford to have that sort of internal support in place,
+                                    yet they need fully operational IT systems in order for the business to run properly.
+                                    For businesses like these, external IT support can be a cost-effective yet vital resource.
+
+
+                .slider__pagination.reviews__slider-pagination

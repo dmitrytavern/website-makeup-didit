@@ -77,7 +77,7 @@ function deactivateMobileSliders() {
 }
 
 function checkMobileSliders() {
-    if (window.innerWidth < 1023) {
+    if (window.innerWidth < 1024) {
         // Activate
         activateMobileSliders()
     } else {
@@ -87,3 +87,27 @@ function checkMobileSliders() {
 }
 
 $(window).on('load resize', checkMobileSliders)
+
+
+new Swiper('.reviews__slider.swiper-container', {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+        el: '.slider__pagination',
+        bulletClass: 'slider__bullet',
+        bulletActiveClass: 'is-active',
+        clickable: true
+    },
+    navigation: {
+        nextEl: '.slider__arrow-next',
+        prevEl: '.slider__arrow-prev',
+        disabledClass: 'btn-slider_disable'
+    },
+    breakpoints: {
+        1024: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        }
+    }
+})

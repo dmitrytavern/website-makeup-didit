@@ -1,0 +1,43 @@
+.reviews
+  overflow: hidden
+  margin-top: 110px
+
+  &__head
+    margin-bottom: 95px
+
+  &__slider
+
+    &-wrapper > div
+      height: auto
+
+    &-arrows
+      justify-content: flex-end
+      margin-bottom: 65px
+
+    &-pagination
+      margin-top: 35px
+
+
+@include media-lg-max
+  .reviews
+    &__slider
+      overflow: unset
+
+      &-arrows
+        display: none
+
+@include media-md-max
+  .reviews
+    &__head
+      margin-bottom: 90px
+
+@include media-lg-min
+  .reviews
+    margin-top: 140px
+
+    &__head
+      margin-bottom: 60px
+
+
+
+@import "home-7-reviews/review"

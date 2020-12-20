@@ -44,3 +44,24 @@
   &:hover
     background: #ffffff
     color: #000
+
+.btn-slider
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 58px
+  height: 52px
+  background: $color-primary
+  border-radius: 2px
+
+  svg
+    transition: fill .3s
+    fill: #fff
+    width: 9px
+    height: 14px
+
+  &_disable
+    background: #FCFBFF
+
+    svg
+      fill: #BEBEBE
