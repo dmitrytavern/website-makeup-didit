@@ -1,0 +1,71 @@
+.instruction
+  background: #FCFBFF
+  overflow: hidden
+
+  &__inner
+    position: relative
+    padding-top: 100px
+    padding-bottom: 65px
+
+  &__dots
+    display: block
+    position: absolute
+    top: 20%
+    right: -68%
+    width: 312px
+    height: 103px
+
+  &__head
+    margin-bottom: 85px
+
+  &__list
+    display: grid
+    grid-template-columns: 1fr
+    grid-column-gap: 55px
+    grid-row-gap: 50px
+
+@include media-md-max
+  .instruction__head
+    margin-bottom: 80px
+
+
+@media only screen and (max-width: $grid-breakpoint-lg - 1px) and (min-width: $grid-breakpoint-md)
+  .instruction
+    &__list li:last-child
+      grid-column: 1/3
+
+@include media-md-min
+  .instruction
+    &__inner
+      padding-top: 120px
+      padding-bottom: 70px
+
+    &__dots
+      top: 11%
+      right: -34%
+
+    &__list
+      grid-template-columns: 1fr 1fr
+
+@include media-lg-min
+  .instruction
+    &__dots
+      right: -15%
+
+    &__list
+      grid-template-columns: 1fr 1fr 1fr
+      grid-column-gap: 40px
+
+@include media-xl-min
+  .instruction
+    &__inner
+      padding-bottom: 100px
+
+    &__dots
+      top: 10%
+      right: -9%
+
+    &__list
+      grid-column-gap: 120px
+
+@import "home-4-instruction/instruction-item"
