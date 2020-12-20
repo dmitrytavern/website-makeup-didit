@@ -1,0 +1,43 @@
+.human
+  height: 100%
+  border: 1px solid #F4F4F4
+
+  &__inner
+    padding: 20px
+
+  &__image
+    margin-bottom: 20px
+
+    img
+      width: 100%
+
+  &__head
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__name
+    font-size: 18px
+    font-weight: 500
+    line-height: 22px
+    color: $color-primary
+    margin-bottom: 4px
+
+  &__position
+    font-size: 15px
+    line-height: 22px
+    color: #888888
+
+  &__icon
+    max-width: 28px
+    max-height: 28px
+
+  &__desc
+    margin-top: 15px
+    line-height: 22px
+    font-size: 15px
+
+@include media-xl-min
+  .human
+    &__inner
+      padding: 30px

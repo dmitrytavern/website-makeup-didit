@@ -1,0 +1,105 @@
+.team
+  overflow: hidden
+  margin-top: 90px
+
+  &__slider
+    overflow: unset
+
+    &-wrapper > div
+      height: auto
+
+    &-pagination
+      margin-top: 30px
+
+  &__head
+    margin-bottom: 60px
+
+  &__tabs
+    display: flex
+    justify-content: center
+    background: #FCFBFF
+
+    &-wrapper
+      display: flex
+      justify-content: center
+      margin-bottom: 70px
+
+    li
+      @include un-margin-horizontal
+
+    a
+      font-size: 17px
+      font-weight: 500
+      color: #888888
+      padding: 22px 27px
+      border-bottom: 1px solid rgba($color-primary, 0)
+
+      &:hover:not(.active)
+        color: #2B2B2B
+
+      &.active
+        color: $color-primary
+        border-color: $color-primary
+
+@include media-lg-max
+  .team__slider
+    padding: 0 25px
+
+@include media-md-max
+  .team
+    &__head
+      margin-bottom: 85px
+
+      span
+        display: none
+
+    &__tabs
+      flex-wrap: wrap
+      justify-content: space-around
+      padding-bottom: 10px
+
+      &-wrapper
+        margin-bottom: 40px
+
+      a
+        font-size: 16px
+        padding: 22px 22px 10px
+
+@include media-md-min
+  .team
+    margin-top: 100px
+
+    &__tabs
+      padding: 0 20px
+
+      li
+        margin: 0 12px
+
+      a
+        padding: 22px
+
+@include media-lg-min
+  .team
+    margin-top: 120px
+
+    &__slider
+      &-wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-column-gap: 40px
+        grid-row-gap: 40px
+
+      &-pagination
+        display: none
+
+    &__tabs
+      padding: 0 40px
+
+      li
+        margin: 0 28px
+
+      a
+        padding: 22px 27px
+
+
+@import "home-5-team/human"

@@ -29,3 +29,61 @@ function toggleHeaderMenu() {
 
 $($headerMenuBtn).on('click', toggleHeaderMenu)
 $(window).on('resize scroll load', scrollPage)
+
+
+// Sliders
+let mobileSliders = []
+let mobileSlidersActive = false
+
+function activateMobileSliders() {
+    if (mobileSlidersActive) return
+
+    mobileSlidersActive = true
+    mobileSliders = [
+        new Swiper('.team__slider.swiper-container', {
+            loop: false,
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: '.slider__pagination',
+                bulletClass: 'slider__bullet',
+                bulletActiveClass: 'is-active',
+                clickable: true
+            },
+            breakpoints: {
+                767: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                }
+            }
+        }),
+    ]
+}
+
+function deactivateMobileSliders() {
+    if (mobileSlidersActive && mobileSliders) {
+        mobileSliders.map(x => {
+            if (Array.isArray(x)) {
+                x.map(x => x.destroy())
+            } else {
+                x.destroy()
+            }
+        })
+        mobileSliders = []
+        mobileSlidersActive = false
+    }
+}
+
+function checkMobileSliders() {
+    if (window.innerWidth < 1023) {
+        // Activate
+        activateMobileSliders()
+    } else {
+        // Deactivate
+        deactivateMobileSliders()
+    }
+}
+
+$(window).on('load resize', checkMobileSliders)

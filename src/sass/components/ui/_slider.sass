@@ -1,0 +1,22 @@
+.slider__pagination
+  display: flex
+  align-items: center
+  justify-content: center
+
+.slider__bullet
+  transition: width .3s, height .3s, background .3s
+  display: block
+  width: 9px
+  height: 9px
+  border-radius: 50%
+  margin: 0 8px
+  background: #D8D8D8
+  outline: none
+
+  @include un-margin-horizontal
+
+
+  &.is-active
+    width: 11px
+    height: 11px
+    background: $color-primary
