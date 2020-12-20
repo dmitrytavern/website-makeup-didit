@@ -32,10 +32,17 @@
 
       @include un-margin-horizontal
 
+      &:not(.is-active)
+        a:hover
+          color: #585858
+
       &.is-active
         a
           color: $color-primary
           text-decoration: underline
+
+
+
 
   &__links
     flex: auto
