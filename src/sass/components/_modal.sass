@@ -1,0 +1,118 @@
+body.is-loaded .modal
+  transition: visibility .3s, opacity .3s
+
+  &-custom-backdrop
+    transition: visibility .3s, opacity .3s
+
+.modal-open .body-content
+  transition: filter .3s
+  filter: blur(5px)
+
+.modal
+  @include visibility-hidden
+
+  max-width: 100%
+  padding: 20px !important
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 102
+
+  // Bg
+  &-custom-backdrop
+    @include visibility-hidden
+
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 101
+    background: rgba(#d8d8d8, .90)
+
+    &.is-open
+      @include visibility-visible
+
+  &.show
+    @include visibility-visible
+
+  &__wrapper
+    position: relative
+    background: #ffffff
+    padding: 45px 40px 30px
+    border-radius: 2px
+    max-width: 455px
+    width: 455px
+    max-height: 100%
+    overflow-y: auto
+
+  &__close
+    position: absolute
+    width: 26px
+    height: 26px
+    top: 28px
+    right: -40px
+    cursor: pointer
+    padding: 5px
+    z-index: 1
+
+  &__tab
+    display: none
+
+    &[data-name="success"]
+      text-align: center
+      font-family: "TTCommons", sans-serif
+
+    &.is-active
+      display: block
+
+  &__title
+    text-align: center
+    font-weight: 700
+
+    &-form
+      font-size: 30px
+      margin-bottom: 55px
+
+      @include make-font-size(24, 30, 480, 1600)
+
+
+    &-success
+      font-size: 26px
+      margin-bottom: 30px
+
+  &__input
+    width: 100%
+    margin: 18px 0
+
+    @include un-margin-vertical
+
+    input
+      width: 100%
+
+  &__checkbox
+    margin-top: 25px
+
+  &__btn
+    display: block
+    margin: 40px auto 0
+    width: 180px
+    max-width: 180px
+
+
+@include media-md-max
+  .modal
+    width: 100%
+    height: 100%
+    max-width: 480px
+
+    &__wrapper
+      padding-left: 20px
+      padding-right: 20px
+      width: 100%
+      max-width: 480px
+
+    &__close
+      top: 28px
+      right: 28px

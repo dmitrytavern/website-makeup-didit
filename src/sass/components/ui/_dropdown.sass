@@ -1,0 +1,33 @@
+.dropdown
+  width: 100%
+  position: relative
+
+  &-menu
+    transition: opacity .3s, visibility .3s
+    position: absolute
+    top: calc(100% - 1px) !important
+    left: 0
+    opacity: 0
+    transform: unset !important
+    will-change: unset !important
+
+    @include visibility-hidden
+
+    &.show
+      @include visibility-visible
+
+  &-toggle
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    svg
+      transition: transform .3s
+      width: 6px
+      height: 10px
+      transform: rotate(90deg)
+
+  &.show
+    .dropdown-toggle svg
+      transform: rotate(-90deg)

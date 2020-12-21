@@ -1,5 +1,9 @@
 import '../sass/app.sass'
 
+$(document).ready(function () {
+    document.body.classList.add('is-loaded')
+})
+
 //  Header
 
 const $header         = $('.header')
@@ -110,4 +114,19 @@ new Swiper('.reviews__slider.swiper-container', {
             spaceBetween: 40,
         }
     }
+})
+
+
+// Modals
+
+$('.modal').on('show.bs.modal', function () {
+    $('.modal-custom-backdrop').addClass('is-open')
+})
+
+$('.modal').on('hide.bs.modal', function () {
+    $('.modal-custom-backdrop').removeClass('is-open')
+})
+
+$('.modal-custom-backdrop').on('click', function () {
+    $('.modal').modal('hide')
 })

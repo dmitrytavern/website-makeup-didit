@@ -5,7 +5,10 @@
   "author": "dogger",
   "license": "ISC",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "@popperjs/core": "^2.6.0",
+    "bootstrap": "^4.5.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.7",
     "@babel/plugin-transform-arrow-functions": "^7.12.1",
