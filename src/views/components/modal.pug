@@ -60,4 +60,55 @@
             a(href="#" data-dismiss="modal").btn.btn-primary.modal__btn Close
 
 
+.modal#modal-talent
+    svg.modal__close( data-dismiss="modal" )
+        use( xlink:href=sprite('close') )
+
+    .modal__wrapper
+        .modal__tab( data-name="form" ).is-active
+            h2.modal__title.modal__title-form Hire a Talent
+            form#modal-talent-form( method="POST" action="callback.php" )
+                div
+                    .input.modal__input.is-required
+                        .input__label First Name
+                        input( type="text" name="first_name" placeholder="Your Name" data-required data-placeholder="Your Name")
+
+                    .input.modal__input.is-required
+                        .input__label Last Name
+                        input( type="text" name="last_name" placeholder="Your Last Name" data-required data-placeholder="Your Last Name")
+
+                    .input.modal__input.is-required
+                        .input__label Email
+                        input( type="email" name="email" placeholder="Your Email" data-required data-placeholder="Your Email")
+
+                    .input.modal__input
+                        .input__label Phone number
+                        input( type="text" name="phone" placeholder="Your Phone Number")
+
+                    .input.modal__input
+                        .input__label Your Task
+                        input( type="text" name="task" placeholder="Describe what do you need")
+
+                    .input.modal__input
+                        .input__label Your Budget
+                        input( type="text" name="budget" placeholder="Budget")
+
+                .modal__checkbox.checkbox
+                    label
+                        input( type="checkbox" name="privacy_policy" hidden="hidden")
+                        .checkbox__box
+                            svg
+                                use( xlink:href=sprite('check') )
+
+                        span I am agree with <a href="#">Privacy Policy</a>
+
+                .form-error-text Has error
+
+                button( type="submit" ).btn.btn-primary.modal__btn Apply
+
+        .modal__tab( data-name="success" )
+            h3.modal__title.modal__title-success Request has been Sent!
+            p Thank you for interesting our company. <br/> Our manager will contact you soon!
+            a(href="#" data-dismiss="modal").btn.btn-primary.modal__btn Close
+
 .modal-custom-backdrop
