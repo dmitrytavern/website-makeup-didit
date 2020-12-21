@@ -1,7 +1,20 @@
 .reviews
-  overflow: hidden
-  margin-top: 110px
+  padding-top: 110px
   margin-bottom: 100px
+
+  &__container
+    position: relative
+
+  &__dots
+    position: absolute
+    top: -47%
+    left: -16%
+    max-width: 910px
+    z-index: -1
+    opacity: .8
+
+  &__inner
+    overflow: hidden
 
   &__head
     margin-bottom: 95px
@@ -18,9 +31,18 @@
     &-pagination
       margin-top: 35px
 
+@include media-xl-max
+  .reviews
+    &__dots
+      top: -25%
+      left: -40%
+      max-width: 816px
 
 @include media-lg-max
   .reviews
+    &__dots
+      max-width: 710px
+
     &__slider
       overflow: unset
 
@@ -29,12 +51,17 @@
 
 @include media-md-max
   .reviews
+    &__dots
+      top: -5%
+      left: -65%
+      max-width: 500px
+
     &__head
       margin-bottom: 90px
 
 @include media-lg-min
   .reviews
-    margin-top: 140px
+    padding-top: 140px
     margin-bottom: 130px
 
     &__head
