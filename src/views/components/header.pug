@@ -1,5 +1,5 @@
-mixin header()
-    header.header
+mixin header(string)
+    header.header( class=string )
         .container
             .header__inner
                 .header__logo
@@ -12,10 +12,10 @@ mixin header()
                         li( class=routeActive('top') ? 'is-active':'' )
                             a( href=route('top') ) Top 3%
 
-                        li( class=routeActive('top') ? 'is-active':'' )
+                        li( class=routeActive('advantages') ? 'is-active':'' )
                             a( href=route('advantages') ) Why we
 
-                        li( class=routeActive('top') ? 'is-active':'' )
+                        li( class=routeActive('about') ? 'is-active':'' )
                             a( href=route('about') ) About Us
 
                 .header__links
@@ -37,10 +37,10 @@ mixin header()
                         li( class=routeActive('top') ? 'is-active':'' )
                             a( href=route('top') ) Top 3%
 
-                        li( class=routeActive('top') ? 'is-active':'' )
+                        li( class=routeActive('advantages') ? 'is-active':'' )
                             a( href=route('advantages') ) Why we
 
-                        li( class=routeActive('top') ? 'is-active':'' )
+                        li( class=routeActive('about') ? 'is-active':'' )
                             a( href=route('about') ) About Us
 
                 .menu__email

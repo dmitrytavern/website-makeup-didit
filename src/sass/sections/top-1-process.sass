@@ -1,0 +1,62 @@
+.process
+  margin-top: 245px
+
+  &__head
+    .section-head__title
+      &:before
+        content: unset
+
+      &:after
+        margin-top: 15px
+
+    .section-head__desc
+      max-width: 915px
+      margin-top: 30px
+
+  &__list
+    margin-top: 80px
+
+  &__block
+    &:first-child .process-block__point:after
+      height: 50%
+
+    &:last-child .process-block__point:after
+      top: 0
+      transform: translate(-50%, 0)
+      height: 45px
+
+
+@include media-lg-max
+  .process
+    margin-bottom: 100px
+
+  .process__block
+    &:first-child
+      .process-block__point
+        &:after
+          height: 90%
+
+        &:before
+          top: 20px
+
+      .process-block__head
+        padding-top: 0
+
+    &:last-child
+      .process-block__point:after
+          height: 16%
+
+      .process-block__desc
+        padding-bottom: 0
+
+
+@include media-lg-min
+  .process__block:nth-child(2n + 1)
+    background-color: #fcfbff
+
+@include media-xl-min
+  .process__list
+    padding: 0 85px
+
+
+@import "top-1-process/process-block"

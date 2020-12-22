@@ -5,12 +5,15 @@
   top: 0
   left: 0
   z-index: 10
+  background: #fff
 
   &__inner
+    transition: border .3s
     display: flex
     align-items: center
     font-weight: 500
     padding: 20px 0
+    border-bottom: 1px solid #f4f4f4
 
   &__logo
     flex: auto
@@ -98,6 +101,12 @@
 
         &:last-child
           transform: rotate(45deg)
+
+  &.home-theme:not(.is-scroll)
+    background: transparent
+
+    .header__inner
+      border-color: transparent
 
   &.is-scroll
     background: #ffffff
