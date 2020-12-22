@@ -1,0 +1,25 @@
+.about
+  margin-top: 245px
+  margin-bottom: 500px
+
+  &__head
+    .section-head__title
+      &:before
+        content: unset
+
+      &:after
+        margin-top: 15px
+
+  &__content
+    text-align: center
+    margin: 165px auto 0
+
+    p
+      font-size: 17px
+      line-height: 22px
+
+
+@include media-xl-min
+  .about
+    &__inner
+      padding: 0 85px
