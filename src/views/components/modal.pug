@@ -22,28 +22,32 @@
                     .input.modal__input
                         .input__label Specialization
                         .dropdown.selector
+                            select( name="specialization" )
+                                option( value="No info" data-placeholder) Choose your Specialization
+                                option( value="Designer" ) Designer
+                                option( value="Developer" ) Developer
+                                option( value="Finance Experts" ) Finance Experts
+                                option( value="Project Managers" ) Project Managers
+
                             button.dropdown-toggle.selector__front( type="button" data-toggle="dropdown" )
                                 span Choose your Specialization
                                 svg
-                                    use( xlink:href=sprite('arrow') )
+                                    use( xlink:href=sprite('arrow-down') )
 
                             .dropdown-menu.selector__list
-                                a( href="#" ) Designer
-                                a( href="#" ) Developer
-                                a( href="#" ) Finance Experts
-                                a( href="#" ) Project Managers
 
                     .input.modal__input
-                        .input__label Working Experiance
-                        input( type="text" name="experiance" placeholder="Your Working Experiance")
+                        .input__label Working Experience
+                        input( type="text" name="experience" placeholder="Your Working Experience")
 
                     .input.modal__input
                         .input__label Portfolio Link
                         input( type="text" name="portfolio" placeholder="Link on your Portfolio")
 
-                .modal__checkbox.checkbox
+                .modal__checkbox.checkbox.form-checkbox-policy
                     label
-                        input( type="checkbox" name="privacy_policy" hidden="hidden")
+                        input( type="hidden" name="privacy_policy" value="false")
+                        input( type="checkbox" name="privacy_policy" value="true")
                         .checkbox__box
                             svg
                                 use( xlink:href=sprite('check') )
@@ -93,9 +97,10 @@
                         .input__label Your Budget
                         input( type="text" name="budget" placeholder="Budget")
 
-                .modal__checkbox.checkbox
+                .modal__checkbox.checkbox.form-checkbox-policy
                     label
-                        input( type="checkbox" name="privacy_policy" hidden="hidden")
+                        input( type="hidden" name="privacy_policy" value="false")
+                        input( type="checkbox" name="privacy_policy" value="true")
                         .checkbox__box
                             svg
                                 use( xlink:href=sprite('check') )

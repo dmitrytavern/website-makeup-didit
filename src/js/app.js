@@ -130,3 +130,190 @@ $('.modal').on('hide.bs.modal', function () {
 $('.modal-custom-backdrop').on('click', function () {
     $('.modal').modal('hide')
 })
+
+
+// Form
+
+function deactivateError() {
+    const $el = $(this)
+    const placeholderText = $el.attr('data-placeholder')
+
+    $el.removeClass('is-error')
+    $el.attr('placeholder', placeholderText)
+}
+
+function activateError(el, name) {
+    const $el = $(`${el} input[name="${name}"]`)
+
+    $el.addClass('is-error')
+    $el.attr('placeholder', 'Required Field')
+}
+
+function checkInputRequired(el, name) {
+    return $(`${el} input[name="${name}"]`).attr('data-required')
+}
+
+function checkPolicyRequired(el) {
+    return $(`${el} input[name="privacy_policy"]`)[1].checked
+}
+
+function checkFormData(el, data) {
+    let error = false
+    for (let { name, value } of data) {
+        if (value === '') {
+            if (checkInputRequired(el, name) !== undefined) {
+                error = true
+                activateError(el, name)
+            }
+        }
+    }
+
+    if (!checkPolicyRequired(el)) {
+        error = true
+        activateError(el, 'privacy_policy')
+    }
+
+    return error
+}
+
+function normalizeFormData(data) {
+    let obj = {}
+    for (let { name, value } of data) {
+        obj[name] = value
+    }
+
+    return obj
+}
+
+
+$('form').each(function (index, item) {
+    const $el = $(item)
+    const $submit = $el.find('button[type="submit"]')
+    const $policy = $el.find('.form-checkbox-policy input')[1]
+
+    function checkPolicy() {
+        if ($policy.checked) {
+            $($submit).removeClass('is-disabled')
+        } else {
+            $($submit).addClass('is-disabled')
+        }
+    }
+
+    $($policy).on('change', checkPolicy)
+    checkPolicy()
+})
+
+$('form input').on('focus', deactivateError)
+$('form input[type="checkbox"]').on('change', deactivateError)
+
+$('.selector').each(function (index, item) {
+    const $el = $(item)
+    const $el_list = $el.find('.selector__list')
+    const $el_front_content = $el.find('.selector__front span')
+    const $select = $el.find('select')
+    const $options = $select.find('option')
+
+    for (let $option of $options) {
+        if ($($option).attr('data-placeholder') !== undefined) continue
+
+        const $link = document.createElement('a')
+        $link.href = '#'
+        $link.innerHTML = $option.innerHTML
+        $link.addEventListener('click', function (e) {
+            e.preventDefault()
+            $($select).val($option.value)
+
+            $el_front_content[0].innerHTML = $option.value
+            $el_list.find('a').removeClass('is-active')
+            $(this).addClass('is-active')
+        })
+
+        $($el_list).append($link)
+    }
+})
+
+$('#modal-freelancer-form').submit(function (e) {
+    e.preventDefault()
+    const data = $(this).serializeArray()
+
+    if (!checkFormData('#modal-freelancer', data)) {
+        const normData = normalizeFormData(data)
+
+        if (normData.privacy_policy === 'false') return
+
+        $.ajax({
+            url: 'callback.php',
+            method: 'POST',
+            dataType: 'JSON',
+            data: {
+                first_name: normData.first_name,
+                last_name: normData.last_name,
+                email: normData.email,
+                specialization: normData.specialization,
+                experience: normData.experience,
+                portfolio: normData.portfolio,
+                privacy_policy: normData.privacy_policy
+            }
+        })
+          .done(() => {
+            $('#modal-freelancer .modal__tab').removeClass('is-active')
+            $('#modal-freelancer .modal__tab[data-name="success"]').addClass('is-active')
+        })
+          .fail((res) => {
+            // NEED DELETE IN PROD
+            $('#modal-freelancer .modal__tab').removeClass('is-active')
+            $('#modal-freelancer .modal__tab[data-name="success"]').addClass('is-active')
+
+            const $errorText = $('#modal-freelancer-form .form-error-text')
+            $errorText[0].innerHTML = res.message || 'Has Error'
+            $errorText.addClass('is-active')
+
+            setTimeout(function () {
+                $('#modal-freelancer-form .form-error-text').removeClass('is-active')
+            }, 3000)
+        })
+    }
+})
+
+$('#modal-talent-form').submit(function (e) {
+    e.preventDefault()
+    const data = $(this).serializeArray()
+
+    if (!checkFormData('#modal-talent', data)) {
+        const normData = normalizeFormData(data)
+
+        if (normData.privacy_policy === 'false') return
+
+        $.ajax({
+            url: 'callback.php',
+            method: 'POST',
+            dataType: 'JSON',
+            data: {
+                first_name: normData.first_name,
+                last_name: normData.last_name,
+                email: normData.email,
+                phone: normData.phone,
+                task: normData.task,
+                budget: normData.budget,
+                privacy_policy: normData.privacy_policy
+            }
+        })
+          .done(() => {
+              $('#modal-talent .modal__tab').removeClass('is-active')
+              $('#modal-talent .modal__tab[data-name="success"]').addClass('is-active')
+          })
+          .fail((res) => {
+              // NEED DELETE IN PROD
+              $('#modal-talent .modal__tab').removeClass('is-active')
+              $('#modal-talent .modal__tab[data-name="success"]').addClass('is-active')
+
+              const $errorText = $('#modal-talent-form .form-error-text')
+              $errorText[0].innerHTML = res.message || 'Has Error'
+              $errorText.addClass('is-active')
+
+              setTimeout(function () {
+                  $('#modal-talent-form .form-error-text').removeClass('is-active')
+              }, 3000)
+          })
+    }
+})

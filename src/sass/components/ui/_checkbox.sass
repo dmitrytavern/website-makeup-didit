@@ -23,14 +23,22 @@
       transition: opacity .3s
       opacity: 0
       fill: $color-primary
-      width: 10px
+      width: 11px
       height: 8px
 
-  input:checked + &__box
-    border-color: $color-primary
+  input
+    position: absolute
+    visibility: hidden
+    opacity: 0
 
-    svg
-      opacity: 1
+    &:checked + .checkbox__box
+      border-color: $color-primary
+
+      svg
+        opacity: 1
+
+    &.is-error + .checkbox__box
+      border-color: #FC2A2A
 
   a
     color: $color-primary
