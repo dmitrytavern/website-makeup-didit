@@ -4,7 +4,9 @@ body.is-loaded .modal
   &-custom-backdrop
     transition: visibility .3s, opacity .3s
 
-.modal-open .body-content
+.modal-open header,
+.modal-open main,
+.modal-open footer
   transition: filter .3s
   filter: blur(5px)
 
@@ -122,3 +124,7 @@ body.is-loaded .modal
     &__close
       top: 28px
       right: 28px
+
+@media only screen and (max-height: 930px)
+  .modal
+    height: 100%
