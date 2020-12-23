@@ -9,6 +9,11 @@ if mode === 'production'
            if file.search('.min') <= -1
                link(href=file rel="preload" as="style")
 
+     link(href=require('../../../fonts/Gilroy/Gilroy-Regular.ttf') rel="preload" as="font" type="font/ttf" crossorigin)
+     link(href=require('../../../fonts/Gilroy/Gilroy-Medium.ttf') rel="preload" as="font" type="font/ttf" crossorigin)
+     link(href=require('../../../fonts/Gilroy/Gilroy-SemiBold.ttf') rel="preload" as="font" type="font/ttf" crossorigin)
+     link(href=require('../../../fonts/Gilroy/Gilroy-Bold.ttf') rel="preload" as="font" type="font/ttf" crossorigin)
+
 
      each file in htmlWebpackPlugin.files.css
          if process.env.BUILD_REQUIRED_MIN_CSS === 'true'
