@@ -242,7 +242,7 @@ $('#modal-freelancer-form').submit(function (e) {
         if (normData.privacy_policy === 'false') return
 
         $.ajax({
-            url: 'callback.php',
+            url: 'callback-freelancer.php',
             method: 'POST',
             dataType: 'JSON',
             data: {
@@ -285,7 +285,7 @@ $('#modal-talent-form').submit(function (e) {
         if (normData.privacy_policy === 'false') return
 
         $.ajax({
-            url: 'callback.php',
+            url: 'callback-talent.php',
             method: 'POST',
             dataType: 'JSON',
             data: {
