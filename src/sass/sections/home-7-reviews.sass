@@ -7,11 +7,12 @@
 
   &__dots
     position: absolute
-    top: -47%
-    left: -16%
+    top: 0
+    left: 0
     max-width: 910px
     z-index: -1
     opacity: .8
+    transform: translate(-26%, -20%)
 
   &__inner
     overflow: hidden
@@ -34,13 +35,13 @@
 @include media-xl-max
   .reviews
     &__dots
-      top: -25%
-      left: -40%
+      transform: translate(-31%, -16%)
       max-width: 816px
 
 @include media-lg-max
   .reviews
     &__dots
+      transform: translate(-27%, -23%)
       max-width: 710px
 
     &__slider
@@ -52,8 +53,7 @@
 @include media-md-max
   .reviews
     &__dots
-      top: -5%
-      left: -65%
+      transform: translate(-30%, -16%)
       max-width: 500px
 
     &__head

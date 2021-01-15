@@ -21,9 +21,17 @@
       margin-top: 20px
 
   &__desc
+    font-size: 17px
     max-width: 689px
     margin: 25px auto 0
     line-height: 22px
+
+  &_white
+    .section-head__title
+      &:after,
+      &:before
+        background: #fff
+        opacity: .2
 
 @include media-md-min
   .section-head

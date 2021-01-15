@@ -1,7 +1,9 @@
 section.instruction
     .container
         .instruction__inner
-            img.instruction__dots( src=require('../../img/dots.png') alt="")
+            picture
+                source( srcset=require('../../img/icons/dots-xl.svg') media="(min-width: 1440px)" )
+                img.instruction__dots( src=require('../../img/icons/dots.svg') alt="")
 
             .section-head.instruction__head
                 h2.section-head__title Hiring Made Easy

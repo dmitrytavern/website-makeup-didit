@@ -12,7 +12,7 @@
     display: flex
     align-items: center
     font-weight: 500
-    padding: 20px 0
+    padding: 21px 0
     border-bottom: 1px solid #f4f4f4
 
   &__logo
@@ -119,6 +119,12 @@
 @include media-md-max
   .header__link
     display: none
+
+@include media-md-min
+  .header
+    &__nav,
+    &__links
+      margin-top: 21px
 
 @include media-lg-min
   .header__menu
