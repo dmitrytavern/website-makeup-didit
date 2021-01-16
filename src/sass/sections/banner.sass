@@ -1,8 +1,8 @@
 .banner
   margin-top: 70px
-  background: url('../../img/banner-bg-test.png')
+  background: url('../../img/banner-bg-xs.png')
   background-repeat: no-repeat
-  background-size: auto 490px
+  background-size: 100% auto
   background-position: center bottom
   background-color: #6d3bc0
 
@@ -33,6 +33,10 @@
 
 @include media-md-max
   .banner
+    &__inner
+      padding-top: 81px
+      padding-bottom: 70px
+
     &__buttons
       flex-direction: column
 
@@ -41,11 +45,15 @@
 
       @include un-margin-vertical
 
+@include media-sm-min
+  .banner
+    background-image: url('../../img/banner-bg.png')
+    background-size: auto 465px
+
 @include media-md-min
   .banner
     background-size: auto 440px
 
 @include media-lg-min
   .banner
-    background-size: auto 440px
     margin-top: 140px
