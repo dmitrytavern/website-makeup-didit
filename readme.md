@@ -1,8 +1,8 @@
 # Makeup of Didit landing
 
-<img src="https://github.com/dmitrytavern/work-makeup-didit/releases/latest/assets/screenshot.png" />
-
 Makeup of a simple landing page layout for a site that searches for freelancers.
+
+<img src="https://github.com/dmitrytavern/work-makeup-didit/releases/latest/download/screenshot.png" style="border-radius: 6px" />
 
 ## Features:
 
