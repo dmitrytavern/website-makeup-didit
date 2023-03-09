@@ -1,9 +1,4 @@
 {
-  "name": "webpack-template",
-  "version": "1.0.0",
-  "description": "Webpack template",
-  "author": "dogger",
-  "license": "ISC",
   "private": true,
   "dependencies": {
     "@popperjs/core": "^2.6.0",
