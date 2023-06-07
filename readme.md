@@ -11,9 +11,8 @@ Makeup of a simple landing page layout for a site that searches for freelancers.
 
 ## Features
 
-- Webpack builder
-- Bootstrap gird
 - BEM naming
+- Webpack builder
 - Responsive layout for 1600px, 1100px, 768px, 375px
 
 ## How to build?
@@ -21,7 +20,7 @@ Makeup of a simple landing page layout for a site that searches for freelancers.
 1. Clone repo
 
 ```
-git clone https://github.com/dmitrytavern/object-parser.git
+git clone https://github.com/dmitrytavern/website-makeup-didit.git
 ```
 
 2. Install deps
