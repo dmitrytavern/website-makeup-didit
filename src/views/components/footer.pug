@@ -7,10 +7,13 @@ mixin footer()
                     .footer__info-dev
                         span Developed by
                         a( href="https://greatpix.studio/" target="_blank" )  Greatpix
+                    .footer__info-dev
+                        a( href="https://github.com/dmitrytavern/website-makeup-didit" target="_blank" aria-label="Go to the github repository" )
+                            img( src=require('../img/icons/github-mark.svg') alt="GitHub"  width="20px" height="20px" )
 
                 .footer__col.footer__main
                     .footer__logo
-                        a( href=route('index') )
+                        a( href=route('index') aria-label="Go to home" )
                             svg
                                 use( xlink:href=require('../img/icons/logo.svg') + '#ico' )
 
