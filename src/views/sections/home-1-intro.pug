@@ -2,10 +2,14 @@ section.intro
     .container.intro__container
         .intro__inner
             .intro__image-title
-                img( src=require('../../img/intro-image.png') alt="" )
+                picture
+                    source( srcset=require('../../img/intro-image.webp'), type='image/webp' )
+                    img( src=require('../../img/intro-image.png') alt="Logo of Didit" width="474px" height="424px")
 
             .intro__image-dots
-                img( src=require('../../img/image-dotes.png') alt="" )
+                picture
+                    source( srcset=require('../../img/image-dotes.webp'), type='image/webp' )
+                    img( src=require('../../img/image-dotes.png') alt="" width="521px" height="554px" )
 
             .intro__content
                 h1.intro__title <span>Hire the Best of </span>  <span> Freelance Talent</span>

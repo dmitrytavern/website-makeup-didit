@@ -1,6 +1,8 @@
 section.reviews
     .container.reviews__container
-        img.reviews__dots( src=require('../../img/image-dotes.png') alt="" )
+        picture
+            source( srcset=require('../../img/image-dotes.webp'), type='image/webp' )
+            img.reviews__dots( src=require('../../img/image-dotes.png') alt="" width="500px" height="532px" )
         .reviews__inner
             .section-head.reviews__head
                 h2.section-head__title Hear From Our Clients
@@ -23,7 +25,9 @@ section.reviews
                                 .review__head
                                     div.review__info
                                         .review__avatar
-                                            img( src=require('../../img/client-1.png') alt="Lyovushkin Kyrylo" )
+                                            picture
+                                                source( srcset=require('../../img/client-1.webp'), type='image/webp' )
+                                                img( src=require('../../img/client-1.png') alt="Lyovushkin Kyrylo" width="100px" height="100px" )
                                         div
                                             .review__name Lyovushkin Kyrylo
                                             .review__position Greatpix Studio, Founder
@@ -43,7 +47,9 @@ section.reviews
                                 .review__head
                                     div.review__info
                                         .review__avatar
-                                            img( src=require('../../img/client-2.png') alt="Andrei Zaika" )
+                                            picture
+                                                source( srcset=require('../../img/client-2.webp'), type='image/webp' )
+                                                img( src=require('../../img/client-2.png') alt="Andrei Zaika" width="100px" height="100px" )
                                         div
                                             .review__name Andrei Zaika
                                             .review__position Azro Studio, Founder
@@ -63,7 +69,9 @@ section.reviews
                                 .review__head
                                     div.review__info
                                         .review__avatar
-                                            img( src=require('../../img/client-1.png') alt="Dmitry Tavern" )
+                                            picture
+                                                source( srcset=require('../../img/client-1.webp'), type='image/webp' )
+                                                img( src=require('../../img/client-1.png') alt="Dmitry Tavern" width="100px" height="100px" )
                                         div
                                             .review__name Dmitry Tavern
                                             .review__position Greatpix Studio, Developer
