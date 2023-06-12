@@ -2130,6 +2130,7 @@ input.is-error {
 }
 .intro__image-title img {
   width: 100%;
+  height: auto;
   max-width: 474px;
   max-height: 424px;
 }
@@ -2142,6 +2143,7 @@ input.is-error {
 }
 .intro__image-dots img {
   width: 100%;
+  height: auto;
 }
 
 @media only screen and (max-width: 1439px) {
@@ -2371,7 +2373,7 @@ input.is-error {
   }
 }
 .advantages {
-  background: url(/website-makeup-didit/img/why-bg.png);
+  background: url(/website-makeup-didit/img/why-bg.webp);
   background-repeat: no-repeat;
   background-size: auto 620px;
   background-position: top center;
@@ -2675,6 +2677,7 @@ input.is-error {
 }
 .human__image img {
   width: 100%;
+  height: auto;
 }
 .human__head {
   display: -webkit-box;
@@ -2729,6 +2732,8 @@ input.is-error {
   top: 0;
   left: 0;
   max-width: 910px;
+  width: auto;
+  height: auto;
   z-index: -1;
   opacity: 0.8;
   -webkit-transform: translate(-26%, -20%);
@@ -3266,7 +3271,7 @@ input.is-error {
 }
 .banner {
   margin-top: 70px;
-  background: url(/website-makeup-didit/img/banner-bg-xs.png);
+  background: url(/website-makeup-didit/img/banner-bg-xs.webp);
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center bottom;
@@ -3334,7 +3339,7 @@ input.is-error {
 }
 @media only screen and (min-width: 578px) {
   .banner {
-    background-image: url(/website-makeup-didit/img/banner-bg.png);
+    background-image: url(/website-makeup-didit/img/banner-bg.webp);
     background-size: auto 465px;
   }
 }
